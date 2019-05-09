@@ -84,7 +84,7 @@
       if (n === 1) {
         // Fade out
         css(progress, {
-          transition: 'all ' + speed + 'ms linear',
+          transition: 'all ' + (speed - 90) + 'ms linear',
           opacity: 0
         });
 
