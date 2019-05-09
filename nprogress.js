@@ -83,20 +83,13 @@
       if (n === 1) {
         // Fade out
         css(progress, {
-          transition: 'none',
-          opacity: 1
+          transition: 'all ' + speed + 'ms linear',
+          opacity: 0
         });
-        progress.offsetWidth; /* Repaint */
 
         setTimeout(function() {
-          css(progress, {
-            transition: 'all ' + speed + 'ms linear',
-            opacity: 0
-          });
-          setTimeout(function() {
-            NProgress.remove();
-            next();
-          }, speed);
+          NProgress.remove();
+          next();
         }, speed);
       } else {
         setTimeout(next, speed);
@@ -165,8 +158,8 @@
     } else {
       if (typeof amount !== 'number') {
         if (n >= 0 && n < 0.2) { amount = 0.1; }
-        else if (n >= 0.2 && n < 0.5) { amount = 0.04; }
-        else if (n >= 0.5 && n < 0.8) { amount = 0.02; }
+        else if (n >= 0.2 && n < 0.5) { amount = 0.08; }
+        else if (n >= 0.5 && n < 0.8) { amount = 0.04; }
         else if (n >= 0.8 && n < 0.99) { amount = 0.005; }
         else { amount = 0; }
       }
