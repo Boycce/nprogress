@@ -1,4 +1,5 @@
 /* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @repository https://github.com/Boycce/nprogress
  * @license MIT */
 
 ;(function(root, factory) {
